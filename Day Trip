@@ -1,16 +1,12 @@
 import random
 
 locations = ["Seattle", "San Francisco", "Los Angeles", "Salt Lake City"]
-print(locations)
 
 restaurants = ["The Pink Door", "Sotto Mare", "Musso and Frank Grill", "Veneto"]
-print (restaurants)
 
-transit = ["Train", "Lyft", "Bus", "Bike"]
-print(transit)
+transit = ["train", "Lyft", "bus", "bike"]
 
-activities = ["Shopping", "Go to a museum ", "Go to the beach", "Hiking"]
-print(activities)
+activities = ["shopping", "go to a museum ", "go to the beach", "hiking"]
 
 list = (locations[0] + ", " + restaurants[0] + ", " + transit[0] + ", " + activities[0])
 
@@ -27,10 +23,10 @@ def day_trip():
     confirm_bool = True
     while confirm_bool:
         day_trip = random.choice(grand_list)
-        user_input = input (f"{day_trip} was selected, would you like to proceed? ")
+        user_input = input (f"{day_trip} was selected, would you like to proceed? Say: yes or no ")
         if user_input == "no":
             day_trip = random.choice(grand_list)
         else:
-            print(f"{day_trip} has been selected!")
+            print(f"Here is your final trip: {day_trip}")
             confirm_bool = False
 day_trip()
